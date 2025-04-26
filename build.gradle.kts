@@ -23,6 +23,12 @@ val exposed_version = "0.45.0"
 val sqlite_version = "3.45.1.0"
 val logback_version = "1.4.5"
 
+ktor {
+    fatJar {
+        archiveFileName.set("fat.jar")
+    }
+}
+
 dependencies {
     implementation("io.ktor:ktor-server-core:$ktor_version")
     implementation("io.ktor:ktor-server-netty:$ktor_version")
